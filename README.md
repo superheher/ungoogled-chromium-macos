@@ -77,7 +77,7 @@ mkdir -p build/{src,download_cache}
 cd build/src
 ```
 
-3. Use `quilt` to refresh all patches: `while quilt push; do quilt refresh; done`
+3. Use `quilt` to refresh all patches: `quilt push -a --refresh`
 	* If an error occurs, go to the next step. Otherwise, skip to Step 5.
 4. Use `quilt` to fix the broken patch:
     1. Run `quilt push -f`
