@@ -14,7 +14,7 @@ author: Michael Gilbert <mgilbert@debian.org>
          libyuv::CopyPlane(mb_src, stride_src, mb_dst, stride_dst, 16, 16);
 --- a/content/browser/renderer_host/render_widget_host_view_base.cc
 +++ b/content/browser/renderer_host/render_widget_host_view_base.cc
-@@ -328,15 +328,16 @@ void RenderWidgetHostViewBase::SetBackgr
+@@ -324,15 +324,16 @@ void RenderWidgetHostViewBase::SetBackgr
    if (default_background_color_ == color)
      return;
  
