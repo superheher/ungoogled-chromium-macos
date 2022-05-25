@@ -3,7 +3,7 @@
 # Simple partitioned (2 of 3) build script for building Ungoogled-Chromium macOS binaries on GitHub Actions
 # Resuming build script for macOS
 
-# [[ $GITHUB_REF =~ arm || $(git log --pretty='%s' -1) =~ arm  ]] && sudo xcode-select -s "/Applications/Xcode_12.4.app"
+sudo xcode-select -s "/Applications/Xcode_13.4.app"
 
 _root_dir=$(dirname $(greadlink -f $0))
 if [[ -f "$_root_dir/epoch_job_start.txt" ]]; then

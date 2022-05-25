@@ -1,4 +1,5 @@
 #!/bin/bash -ux
+sudo xcode-select -s "/Applications/Xcode_13.4.app"
 env
 set
 uname -a
