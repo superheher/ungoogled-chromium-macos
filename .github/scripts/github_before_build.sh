@@ -33,7 +33,7 @@ mkdir -p "$_download_cache"
 shopt -s nocasematch
 if [[ $GITHUB_REF =~ arm || $(git log --pretty='%s' -1) =~ arm  ]]; then
   echo 'target_cpu = "arm64"' >> "$_root_dir/flags.macos.gn"
-  # sudo xcode-select -s "/Applications/Xcode_12.4.app"
+  # sudo xcode-select -s "/Applications/Xcode_13.4.app"
 fi
 
 cp "$_main_repo/flags.gn" "$_src_dir/out/Default/args.gn"

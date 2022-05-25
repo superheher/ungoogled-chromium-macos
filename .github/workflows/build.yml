@@ -26,7 +26,7 @@ on:
 jobs:
   build_job_01:
     name: Start Building Ungoogled-Chromium for macOS
-    runs-on: macos-11
+    runs-on: macos-12
     outputs:
       status: ${{ steps.build.outputs.status }}
 
@@ -92,7 +92,7 @@ jobs:
   build_job_02:
     continue-on-error: true
     name: Resuming Building Ungoogled-Chromium for macOS
-    runs-on: macos-11
+    runs-on: macos-12
     needs: build_job_01
     if: ${{needs.build_job_01.outputs.status == 'running'}}
     outputs:
@@ -164,7 +164,7 @@ jobs:
   build_job_03:
     continue-on-error: true
     name: Further Resuming Building Ungoogled-Chromium for macOS
-    runs-on: macos-11
+    runs-on: macos-12
     needs: build_job_02
     if: ${{needs.build_job_02.outputs.status == 'running'}}
     outputs:
@@ -236,7 +236,7 @@ jobs:
   build_job_04:
     continue-on-error: true
     name: Further Resuming Building Ungoogled-Chromium for macOS
-    runs-on: macos-11
+    runs-on: macos-12
     needs: build_job_03
     if: ${{needs.build_job_03.outputs.status == 'running'}}
     outputs:
@@ -308,7 +308,7 @@ jobs:
   build_job_05:
     continue-on-error: true
     name: Further Resuming Building Ungoogled-Chromium for macOS
-    runs-on: macos-11
+    runs-on: macos-12
     needs: build_job_04
     if: ${{needs.build_job_04.outputs.status == 'running'}}
     outputs:
@@ -380,7 +380,7 @@ jobs:
   build_job_06:
     continue-on-error: true
     name: Further Resuming Building Ungoogled-Chromium for macOS
-    runs-on: macos-11
+    runs-on: macos-12
     needs: build_job_05
     if: ${{needs.build_job_05.outputs.status == 'running'}}
     outputs:
